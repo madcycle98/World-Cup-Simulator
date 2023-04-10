@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width", initial-scale=1.0>
+        <title>World Cup Simulator</title>
+        <link rel="icon"  type="image/x-icon" href="images\icons\trophyicon2.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <img src="..\public\images\icons\menu-burger.png" id="burger-menu" class="burger-icon" alt="menu-opener">
+            <h1>World Cup Simulator</h1>
+        </header>
+
+        <nav id="navigation-menu">
+            <a href="index.html" class="nav-btn">Home</a>
+            <a href="schedule.html" class="nav-btn">Schedule</a>
+            <a href="table.html" class="nav-btn">Table</a>
+            <a href="charts.html" class="nav-btn  nav-active">Charts</a>
+            <!-- <a href="" class="nav-btn">Stats</a> -->
+        </nav>
+
+        <div id="content-zone-schedule" >
+            <p id="alert-welcome-text" class="text">You need to complete the Group Stage to play the Knockout Stage!</p>
+            <div id="knockout-zone"></div>
+
+        <main id="tournament">
+            <ul class="round round-1">
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="quart1" class="game game-top"><span id="Gquart1"></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="quart2" class="game game-bottom "><span id="Gquart2"></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="quart3" class="game game-top"><span id="Gquart3"></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="quart4" class="game game-bottom "><span id="Gquart4"></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="quart5" class="game game-top "><span id="Gquart5"></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="quart6" class="game game-bottom"><span id="Gquart6"></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="quart7" class="game game-top"><span id="Gquart7"></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="quart8" class="game game-bottom "><span id="Gquart8"></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+              
+            </ul>
+            <ul class="round round-2">
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="semi1" class="game game-top"><span></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="semi2" class="game game-bottom "><span></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="semi3" class="game game-top"><span></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="semi4" class="game game-bottom "><span></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+
+            </ul>
+            <ul class="round round-3">
+              <li class="spacer">&nbsp;</li>
+              
+              <li id="final1" class="game game-top"> <span></span></li>
+              <li class="game game-spacer">&nbsp;</li>
+              <li id="final2" class="game game-bottom "><span></span></li>
+          
+              <li class="spacer">&nbsp;</li>
+
+            </ul> 
+          </main>
+            </div>
+        <script src="charts-main.js"></script>
+    </body>
+
+</html>
