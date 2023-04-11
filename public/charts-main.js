@@ -1,17 +1,10 @@
-/* -----    Mobile menu    -----*/
-
-const navigationMenu = document.getElementById("navigation-menu")
-const burgerMenu = document.getElementById("burger-menu")
-
-burgerMenu.addEventListener("click", () => {
-    navigationMenu.classList.toggle("active")
-    burgerMenu.classList.toggle("burger-icon-active")
-})
+import {powerRankArray1, powerRankArray2, powerRankArray3} from  "/public/data.js";
 
 /* -----    Utils    -----*/
 let final = false
 let knockOut = false
 let groupStage = false
+let winnerWho = ""
 let winners = {
     q1: "",
     q2: "",
@@ -41,31 +34,10 @@ function randomPicker(num) {
     return Math.floor(Math.random()*num)
 }
 
-const powerRankArray1 = new Array(100)
-    powerRankArray1.fill(0, 0, 10)
-    powerRankArray1.fill(1, 10, 23)
-    powerRankArray1.fill(2, 23, 71)
-    powerRankArray1.fill(3, 71, 91)
-    powerRankArray1.fill(4, 91, 98)
-    powerRankArray1.fill(5, 98, 100)
-const powerRankArray2 = new Array(100)
-    powerRankArray2.fill(0, 0, 25)
-    powerRankArray2.fill(1, 25, 60)
-    powerRankArray2.fill(2, 60, 88)
-    powerRankArray2.fill(3, 88, 95)
-    powerRankArray2.fill(4, 95, 99)
-    powerRankArray2.fill(5, 99, 100)
-const powerRankArray3 = new Array(100)
-    powerRankArray3.fill(0, 0, 60)
-    powerRankArray3.fill(1, 60, 94)
-    powerRankArray3.fill(2, 94, 98)
-    powerRankArray3.fill(3, 98, 99)
-    powerRankArray3.fill(4, 99, 100)
-
     function renderGame(team1, team2, stage, htmlNodeId, htmlNodeId2, nextTurn) {
 
-        goalsTeam1 = renderRandomGoals(team1)
-        goalsTeam2 = renderRandomGoals(team2)
+        let goalsTeam1 = renderRandomGoals(team1)
+        let goalsTeam2 = renderRandomGoals(team2)
         team1.goalsFor += goalsTeam1
         team1.goalsAgainst += goalsTeam2
         team2.goalsFor += goalsTeam2
@@ -197,7 +169,6 @@ const group2 = allGroups.shift()
 const group3 = allGroups.shift()
 const group4 = allGroups.shift()
 const group1P1 = group1.find(item => item.position === 1)
-console.log(group1P1)
 const group1P2 = group1.find(item => item.position === 2)
 const group2P1 = group2.find(item => item.position === 1)
 const group2P2 = group2.find(item => item.position === 2)
@@ -259,7 +230,6 @@ function playQuartMode() {
     playStageBtn.innerText = `Play semis`
     playStageBtn.removeEventListener(`click`, playQuartMode)
     playStageBtn.addEventListener(`click`, playSemisMode)
-    console.log(winners)
 }
 
 function playSemisMode() {
@@ -267,7 +237,6 @@ function playSemisMode() {
     playStageBtn.innerText = `Play finals`
     playStageBtn.removeEventListener(`click`, playSemisMode)
     playStageBtn.addEventListener(`click`,playFinalsMode)
-    console.log(winners)
 }
 
 function playFinalsMode() {
