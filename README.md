@@ -3,7 +3,7 @@
 
  ---
 
-## PlayFlow & Insturctions
+## PlayFlow & Instructions
 
 1. Pressing *"Play"* gives access to the list of Football Teams running for the current World Cup Title. The Teams are divided in pots, based on teams strength (as it is in reality).
 2. *"Draw teams"* creates mixed groups making sure each one has 1 Team from every Pot.
